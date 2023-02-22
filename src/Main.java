@@ -12,6 +12,7 @@ public class Main {
         extracted(vector);
 
     }
+    //Para sacar por pantalla el vector en el main
     public static void extracted(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10 == 0) System.out.println();
@@ -19,6 +20,7 @@ public class Main {
         }
     }
 
+    //Para conseguir el vector
     public static int[] getVector(int dato, int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10 == 0) System.out.println();
@@ -27,6 +29,7 @@ public class Main {
         vector = generarPrimos(dato);
         return vector;
     }
+
     // ¿Cuántos primos hay? (Metodo)
     public static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
         int i;
@@ -36,8 +39,8 @@ public class Main {
         }
         return cuenta;
     }
-    // Generar números primos de 1 a max
 
+    // Generar números primos de 1 a max
     public static int[] generarPrimos (int max) {
         int i,j;
         if (max >= 2) {
