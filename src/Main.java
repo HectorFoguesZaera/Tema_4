@@ -1,12 +1,12 @@
 import java.util.Scanner;
 public class Main {
-    private static void extracted(int[] vector) {
+    public static void extracted(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10 == 0) System.out.println();
             System.out.print(vector[i] + "\t");
         }
     }
-    private static int[] getVector(int dato, int[] vector) {
+    public static int[] getVector(int dato, int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10 == 0) System.out.println();
             System.out.print(i + 1 + "\t");
@@ -30,7 +30,7 @@ public class Main {
 
 
     // ¿Cuántos primos hay? (Metodo)
-    private static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
+    public static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
         int i;
         for (i = 0; i < dim; i++) {
             if (esPrimo[i])
