@@ -1,20 +1,5 @@
 import java.util.Scanner;
 public class Main {
-    public static void extracted(int[] vector) {
-        for (int i = 0; i < vector.length; i++) {
-            if (i%10 == 0) System.out.println();
-            System.out.print(vector[i] + "\t");
-        }
-    }
-    public static int[] getVector(int dato, int[] vector) {
-        for (int i = 0; i < vector.length; i++) {
-            if (i%10 == 0) System.out.println();
-            System.out.print(i + 1 + "\t");
-        }
-        vector = generarPrimos(dato);
-        return vector;
-    }
-
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce el número para la criba de Erastótenes:");
@@ -27,8 +12,21 @@ public class Main {
         extracted(vector);
 
     }
+    public static void extracted(int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            if (i%10 == 0) System.out.println();
+            System.out.print(vector[i] + "\t");
+        }
+    }
 
-
+    public static int[] getVector(int dato, int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            if (i%10 == 0) System.out.println();
+            System.out.print(i + 1 + "\t");
+        }
+        vector = generarPrimos(dato);
+        return vector;
+    }
     // ¿Cuántos primos hay? (Metodo)
     public static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
         int i;
@@ -39,10 +37,11 @@ public class Main {
         return cuenta;
     }
     // Generar números primos de 1 a max
+
     public static int[] generarPrimos (int max) {
         int i,j;
         if (max >= 2) {
-        // Declaraciones
+            // Declaraciones
             int dim = max + 1; // Tamaño del array
             boolean[] esPrimo = new boolean[dim];
             // Inicializar el array
@@ -51,10 +50,10 @@ public class Main {
                 // Eliminar el 0 y el 1, que no son primos
                 esPrimo[0] = esPrimo[1] = false;
             }
-        // Crida
+            // Crida
             for (i = 2; i < Math.sqrt(dim) + 1; i++) {
                 if (esPrimo[i]) {
-            // Eliminar los múltiplos de i
+                    // Eliminar los múltiplos de i
                     for (j = 2*i; j < dim; j += i)
                         esPrimo[j] = false;
                 }
@@ -71,7 +70,8 @@ public class Main {
             return primos;
         } else { // max < 2
             return new int[0];
-             // Vector vacío
+            // Vector vacío
         }
     }
+
 }
