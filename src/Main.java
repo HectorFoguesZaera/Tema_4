@@ -1,11 +1,11 @@
 /**
- *
+ * @author Hector Fogues Zaera
  */
-
-
 import java.util.Scanner;
 public class Main {
-
+    /**
+     *Esto es el main donde se introducen los datos
+     */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce el número para la criba de Erastótenes:");
@@ -18,7 +18,10 @@ public class Main {
         extracted(vector);
 
     }
-    //Para sacar por pantalla el vector en el main
+    /**
+     *Para sacar por pantalla el vector en el main
+     * @param vector indica el vector
+     */
     public static void extracted(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10 == 0) System.out.println();
@@ -26,7 +29,12 @@ public class Main {
         }
     }
 
-    //Para conseguir el vector
+    /**
+     *Para conseguir el vector
+     * @param dato mete el dato
+     * @param vector indica el vector
+     * @return devuelve el vector
+     */
     public static int[] getVector(int dato, int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10 == 0) System.out.println();
@@ -36,7 +44,13 @@ public class Main {
         return vector;
     }
 
-    // ¿Cuántos primos hay? (Metodo)
+    /**
+     * ¿Cuántos primos hay? (Metodo)
+     * @param dim numero entero
+     * @param esPrimo dice si es primo
+     * @param cuenta cuenta cuanto hay
+     * @return devuelve la cuenta
+     */
     public static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
         int i;
         for (i = 0; i < dim; i++) {
@@ -46,7 +60,12 @@ public class Main {
         return cuenta;
     }
 
-    // Generar números primos de 1 a max
+    /**
+     * Generar números primos de 1 a max
+     * @param max es el maximo
+     * @return devuelve el numero de primos que hay
+     */
+
     public static int[] generarPrimos (int max) {
         int i,j;
         if (max >= 2) {
